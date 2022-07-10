@@ -1,0 +1,36 @@
+package kamal;
+
+import java.util.Scanner;
+
+public class StringIsPresent {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String s1 = sc.next();
+		String s2 = sc.next();
+		if (isStringPresent(s1, s2))
+		{
+			System.out.print("yes");
+		}
+		else {
+			System.out.print("no");
+		}
+		sc.close();
+
+	}
+	public static boolean isStringPresent(String s1, String s2) {
+	int	n = s1.length();
+	int	m= s2.length();
+		int i =0;
+		int j=0;
+		while(i<n && j<m) {
+			
+			if(s1.charAt(i) == s2.charAt(j)) {
+				i++;
+				j++;
+			}
+		}
+		return i==n;
+	}
+
+}
